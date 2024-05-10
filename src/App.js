@@ -146,7 +146,6 @@ function isValidHttpUrl(string) {
 
 function NewFactForm({ setFacts, setShowForm }) {
   const [text, setText] = useState("");
-  // Fixed in a video text overlay
   const [source, setSource] = useState("");
   const [category, setCategory] = useState("");
   const [isUploading, setIsUploading] = useState(false);
@@ -315,9 +314,8 @@ function Fact({ fact, setFacts }) {
       <span
         className="tag"
         style={{
-          backgroundColor: fact.category
-            ? CATEGORIES.find((cat) => cat.name === fact.category)?.color
-            : "#000",
+          backgroundColor: CATEGORIES.find((cat) => cat.name === fact.category)
+            ?.color,
         }}
       >
         {fact.category}
