@@ -154,7 +154,6 @@ function NewFactForm({ setFacts, setShowForm }) {
   async function handleSubmit(e) {
     // 1. Prevent browser reload
     e.preventDefault();
-    console.log(text, source, category);
 
     // 2. Check if data is valid. If so, create a new fact
     if (text && isValidHttpUrl(source) && category && textLength <= 200) {
